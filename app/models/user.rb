@@ -12,7 +12,7 @@ class User
   validates :Email, format: {with: URI::MailTo::EMAIL_REGEXP }
   validate :checkpassword
   def checkpassword
-  	if Password!=Confirm_Password
+  	if :Password != :Confirm_Password
   		errors.add(:Password, " and Confirm_Password doesn't match")
   	end
   end
